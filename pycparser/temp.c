@@ -1,0 +1,1 @@
+func(){malloc(sizeof(var)*var);}

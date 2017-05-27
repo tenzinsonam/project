@@ -1,0 +1,14 @@
+updateDecorations:
+	decorators[]:
+		colors.forEach:
+			
+			
+			
+			
+			
+			
+			
+			
+window.activeTextEditor.document.getText() - active editor's document's text 
+
+words[] = words matching nibba

@@ -1,0 +1,6 @@
+extension has to export 'activate()' from the main file
+may contain 'deactivate()'
+defines what is to be done on activation
+
+imports 'vscode' api
+

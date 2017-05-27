@@ -1,0 +1,6 @@
+node modules - language services and compiler
+out - compilation output
+src - sources
+test - tests folder
+package - manifest file
+vsc-exte.. - extension develepment quick start

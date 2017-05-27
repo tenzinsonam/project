@@ -1,0 +1,7 @@
+successfully shown the text in 'editor/context' by giving command 'extension.sayHello'
+
+'editor/title' chosen as the menu
+
+'group:navigation' made the icon appear in editor/title
+
+'extension.sayHello' not a standard command

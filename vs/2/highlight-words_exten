@@ -1,0 +1,9 @@
+interface Highlightable
+
+let words: Highlightable[] = [] (??declaration of highlightable array)
+
+window.showINputBox({prompt: 'the expression'})
+  .then(word			(gives what to do)(??word contains value) 		
+  
+  	word.indexOf('/') 		(returns index of /)
+  	word.split('/')			(splits on '/' )

@@ -1,0 +1,5 @@
+interface similar to class,  interface Book{
+	title: string;
+	author: string;
+}
+function(myBook: Book)  //Book is the interface

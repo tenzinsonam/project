@@ -1,0 +1,5 @@
+main javaScript code in extension.js
+
+activationEvents - condition when extension is activeted
+contributes - adds the command in command palette
+
