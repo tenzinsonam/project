@@ -9,8 +9,8 @@ list1 = []
 list2 = []
 #paraml = []
 dict = {'FuncCall': '2,4,6'}                        #update on change in sample.txt
-						    #del output file
-os.remove('output.txt')
+						    #create output.txt file
+
 
 #######################
 '''
@@ -288,7 +288,7 @@ def func_FuncCall(node):
 			#print("The ans is "+ str(val))
 			if val:
 				stri = print_FuncCall(node)
-				strin = str(node.coord.line) + ":" + str(i) + ":" + stri + "\n"
+				strin = str(node.coord.line) + ":" + str(i) + ":" + stri + ";\n"
 				temp = open("output.txt","a")
 				temp.write(strin)
 				temp.close()
@@ -390,5 +390,6 @@ def dfs(node):
 
 if __name__ == "__main__":
 	ast = parse_file(filename)
+	os.remove('output.txt')
 	#ast.show()
 	dfs(ast)

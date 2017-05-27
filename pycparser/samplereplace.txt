@@ -1,7 +1,7 @@
 FuncCall				
-strncpy
+func_strcpy
 strncpy(var,var);
-nomnomnom
+func_nomnom
 nomnomnom(var,var);
-malloc
+func_malloc
 malloc(sizeof(var)*var);

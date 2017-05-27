@@ -1,0 +1,2 @@
+strncpy(nomnom(k,z),c,??)
+nomnomnom(k,z)
