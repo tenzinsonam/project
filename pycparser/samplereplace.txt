@@ -1,0 +1,7 @@
+FuncCall				
+strncpy
+strncpy(var,var);
+nomnomnom
+nomnomnom(var,var);
+malloc
+malloc(sizeof(var)*var);

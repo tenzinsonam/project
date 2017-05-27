@@ -1,20 +1,23 @@
 from pycparser import c_parser, c_ast, parse_file, c_generator
-import linecache, pdb
+import linecache, pdb, os
 
 
 pattern = 'sample.txt'
 filename = "sample.c"
+output = 'output.txt'
 list1 = []
 list2 = []
-paraml = []
+#paraml = []
 dict = {'FuncCall': '2,4,6'}                        #update on change in sample.txt
+						    #del output file
+os.remove('output.txt')
 
 #######################
 '''
 
 
 
-
+"((((((((()))))))))
 '''
 
 
@@ -102,7 +105,7 @@ def print_FuncCall(node):
 		param = param + x + ','
 	param = param[:-1]
 	stri = name + '(' + param + ')'
-	print(args)
+	#print(args)
 	return stri
 
 
@@ -110,6 +113,7 @@ def print_FuncCall(node):
 
 
 def print_ID(node):
+	#print(node.name)
 	return node.name
 
 
@@ -283,8 +287,13 @@ def func_FuncCall(node):
 			list2 = []
 			#print("The ans is "+ str(val))
 			if val:
-				str = print_FuncCall(node)
-				print(str)
+				stri = print_FuncCall(node)
+				strin = str(node.coord.line) + ":" + str(i) + ":" + stri + "\n"
+				temp = open("output.txt","a")
+				temp.write(strin)
+				temp.close()
+				#print(strin)
+				#print(node.coord.line)
 	return
 
 

@@ -1,6 +1,41 @@
 from pycparser import c_parser, c_ast, parse_file, c_generator
+import linecache
+output = 
 
-filename = "sample.c"
-ast = parse_file(filename)
-#print(ast.ext[0].body.block_items[1].args.exprs)
-ast.show()
+
+
+# sample.txt and samplereplace.txt should be similar
+
+
+
+
+
+
+
+
+jkj
+
+
+
+
+
+
+
+
+
+def line_check():
+	
+
+
+
+
+
+
+
+
+
+
+if __name__ == __main__:
+	line_check()
+	
+
