@@ -8,7 +8,7 @@ output = 'output.txt'
 list1 = []
 list2 = []
 #paraml = []
-dict = {'FuncCall': '2,4,6'}                        #update on change in sample.txt
+dict = {'FuncCall': '2,4,6','Assignment': '10,99'}                        #update on change in sample.txt
 						    #create output.txt file
 
 
@@ -89,6 +89,41 @@ def dfs_check(node,patt):
 		return False
 	
 	'''
+
+
+
+def under_FuncCall(node):
+	rnge = dict['Assignment']
+	rnge = rnge.split(',')
+	#print(rnge)
+	for i in rnge:
+		line = (linecache.getline(pattern, int(i))).strip()
+		#print(node.name.name)
+		if node.name.name == line:
+			p_line = int(i)+1
+			bst = pattern_ast(p_line)
+			
+			list1.append(node)
+			list2.append(bst)
+			val = dfs_check(node,bst)
+			global list1, list2
+			list1 = []
+			list2 = []
+			#print("The ans is "+ str(val))
+			if val:
+				stri = print_FuncCall(node)
+				strin = str(i) + ":" + stri 
+				#temp = open("output.txt","a")
+				#temp.write(strin)
+				#temp.close()
+				#print(strin)
+				#print(node.coord.line)
+				return strin
+			#else:
+				#return 
+	return "not"
+
+
 
 
 #################################    print string
@@ -294,6 +329,8 @@ def func_FuncCall(node):
 				temp.close()
 				#print(strin)
 				#print(node.coord.line)
+				
+		
 	return
 
 
@@ -301,6 +338,25 @@ def func_FuncCall(node):
 
 
 def func_Assignment(node):
+	vari = node.lvalue.name
+	#print(node.lvalue.to_type)
+	if type(node.rvalue).__name__ == 'Cast':
+		typ = node.rvalue.to_type.type.type.type.names[0]
+		#print('typ')
+		if type(node.rvalue.expr).__name__ == 'FuncCall':
+			stri = under_FuncCall(node.rvalue.expr)
+			#print(stri)
+			if stri != 'not':
+				lst = stri.split(':')
+				lne = lst[0]
+				strii = lst[1]
+				#print(stri)
+				strin = str(node.coord.line) + ":" + lne + ':' + vari + "=(" + typ +"*)" + strii + ";\n"
+				#print(strin)
+				temp = open("output.txt","a")
+				temp.write(strin)
+				temp.close()		
+			
 	return
 
 
@@ -376,6 +432,7 @@ def func_FuncDef(node):
 
 
 def dfs(node):
+	
 	for xname, x in node.children():
 		cls = type(x).__name__
 		if cls in dict:
@@ -390,6 +447,9 @@ def dfs(node):
 
 if __name__ == "__main__":
 	ast = parse_file(filename)
-	os.remove('output.txt')
+	#os.remove('output.txt')
 	#ast.show()
+	with open("output.txt","w"):
+		pass
+
 	dfs(ast)

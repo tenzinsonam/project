@@ -5,3 +5,7 @@ func_nomnom
 nomnomnom(var,var);
 func_malloc
 malloc(sizeof(var)*var);
+
+Assignment
+func_assi_malloc
+malloc(sizeof(var)*var);

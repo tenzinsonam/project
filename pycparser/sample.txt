@@ -6,3 +6,6 @@ nomnom(var,var);
 malloc
 malloc(sizeof(var)*var);
 
+Assignment
+malloc
+malloc(sizeof(var)*var);
