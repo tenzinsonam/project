@@ -8,7 +8,7 @@ output = 'output.txt'
 list1 = []
 list2 = []
 #paraml = []
-dict = {'FuncCall': '2,4,6','Assignment': '10,99'}                        #update on change in sample.txt
+dict = {'FuncCall': '2,4','Assignment': '9,99'}                        #update on change in sample.txt
 						    #create output.txt file
 
 

@@ -3,8 +3,7 @@ strcpy
 strcpy(var,var);
 nomnom
 nomnom(var,var);
-malloc
-malloc(sizeof(var)*var);
+
 
 Assignment
 malloc
