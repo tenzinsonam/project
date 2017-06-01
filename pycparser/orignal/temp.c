@@ -1,1 +1,1 @@
-func(){p=(int*)malloc(sizeof(int)*k);}
+func(){malloc(sizeof(var)*var);}

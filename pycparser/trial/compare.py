@@ -7,6 +7,7 @@ filename = "sample.c"
 output = 'output.txt'
 list1 = []
 list2 = []
+list3 = []
 #paraml = []
 dict = {'FuncCall': '2,4','Assignment': '9,99'}                        #update on change in sample.txt
 						    #create output.txt file
@@ -140,7 +141,7 @@ def print_FuncCall(node):
 		param = param + x + ','
 	param = param[:-1]
 	stri = name + '(' + param + ')'
-	print(args)
+	#print(args)
 	return stri
 
 
@@ -313,7 +314,7 @@ def func_FuncCall(node):
 		if node.name.name == line:
 			p_line = int(i)+1
 			bst = pattern_ast(p_line)
-			
+		###############	
 			list1.append(node)
 			list2.append(bst)
 			val = dfs_check(node,bst)

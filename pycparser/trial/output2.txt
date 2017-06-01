@@ -1,0 +1,3 @@
+strncpy(nomnom(k,z),c,??)
+nomnomnom(k,z)
+if(p!=NULL){p=(int*)malloc(sizeof(int)*k);}

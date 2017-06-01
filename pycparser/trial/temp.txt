@@ -1,0 +1,1 @@
+void(){v0=(v1*)malloc(sizeof(v2)*v3);}

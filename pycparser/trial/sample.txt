@@ -1,0 +1,16 @@
+FuncCall				
+strcpy
+strcpy(v0,v1);
+{'v0': '','v1': ''}
+
+
+Assignment
+malloc
+v0 = (int*)malloc(sizeof(int)*v1);
+{'v0': '','v1': '','int': ''}
+
+
+Decl
+malloc
+int v0 = (int*)malloc(sizeof(int)*v1);
+{'v0': '','v1': '','int': '' ,'ptr': ''}

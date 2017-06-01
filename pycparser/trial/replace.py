@@ -88,8 +88,7 @@ def func_assi_malloc(stri):
 	vari = node.ext[0].body.block_items[0].lvalue.name
 	#typ = node.rvalue.to_type.type.type.type.names[0]
 	strii = "if(" + vari + "!=NULL){" + stri + "}\n"
-	striii = stri + "if(p!=NULL){'insert code here'};"
-	printFile(striii)
+	printFile(strii)
 	#print(strii)
 	
 	

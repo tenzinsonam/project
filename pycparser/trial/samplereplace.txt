@@ -1,0 +1,10 @@
+FuncCall				
+func_strcpy
+strncpy(var,var);
+func_nomnom
+nomnomnom(var,var);
+
+
+Assignment
+func_assi_malloc
+malloc(sizeof(var)*var);
