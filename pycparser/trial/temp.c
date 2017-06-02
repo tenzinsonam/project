@@ -1,1 +1,1 @@
-func(){v0 = (int*)malloc(sizeof(int)*v1);}
+func(){gets(v0);}

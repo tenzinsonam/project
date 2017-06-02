@@ -1,0 +1,1 @@
+func(){strncpy(param0,param1);}

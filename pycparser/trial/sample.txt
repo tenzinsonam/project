@@ -2,6 +2,9 @@ FuncCall
 strcpy
 strcpy(v0,v1);
 {'v0': '','v1': ''}
+gets
+gets(v0);
+{'v0': ''}
 
 
 Assignment

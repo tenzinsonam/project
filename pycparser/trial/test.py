@@ -2,7 +2,7 @@ from pycparser import c_parser, c_ast, parse_file, c_generator
 import linecache
 
 
-dicto = {'FuncCall': '2,99','Assignment': '8,99'}
+dicto = {'FuncCall': '2,5,99','Assignment': '8,99'}
 #intr = ['call_ID']
 filename = 'sample.c'
 pattern = 'sample.txt'
