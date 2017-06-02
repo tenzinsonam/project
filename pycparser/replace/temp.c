@@ -1,1 +1,5 @@
-func(){strncpy(param0,param1);}
+int func()
+{
+  char *****param0 = (char *****) malloc((sizeof(char ****)) * n);
+}
+
