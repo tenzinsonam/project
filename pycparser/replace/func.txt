@@ -1,2 +1,2 @@
-strncpy(param0,param1);
+strncpy(param0,param1,var);
 int** param0 = (int**)malloc(sizeof(int*)*param1);

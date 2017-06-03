@@ -105,14 +105,28 @@ def printChange(node, lno):		# prints the final output in a list
 	lst = []
 	generator = c_generator.CGenerator()
 	stri = generator.visit(node)
-	temp = open('temp.c','r+')
+	#print stri
+	stri = stri.split('\n')
+	#print stri
+	stri = ''.join(stri[2:-3]).strip()
+	#print stri
+	#assert False
+	return stri
+	#print(stri)
+	#assert False
+	""" 
+	temp = open('temp.c','w')
 	temp.write(stri)
 	temp.close()
-	for i in range(3, 3+ran):
-		line = (linecache.getline(tempc, i)).strip()
+	print stri
+	
+	for i in range(3, 3+int(ran)):
+		line = (linecache.getline('temp.c', i)).strip()
+		print linecache.getline('temp.c', i)
 		lst.append(line)
 	return lst
 	#assert False
+	""" 
 
 
 
@@ -120,13 +134,23 @@ def replacVar(ast, par):		#replaces variable with the values given
 	for xname, x in ast.children():
 		try:
 			if x.name.startswith('param'):
+				#print x
 				ind = int(x.name[5:])
 				val = par[ind]
 				#print val
 				x.name = val
 			replacVar(x, par)
 		except AttributeError:
-			replacVar(x, par)
+			try:
+				#print x.declname
+				if x.declname.startswith('param'):
+					#print('wello')
+					ind = int(x.declname[5:])
+					val = par[ind]
+					x.declname = val
+				replacVar(x, par)
+			except AttributeError:
+				replacVar(x, par)
 		
 
 
@@ -157,6 +181,7 @@ def getFunc(lno):			#generates ast for the replacement function
 	#k = 'lo' in stro
 	#print k
 	#assert False
+	#print strii
 	return ast
 
 
@@ -166,7 +191,7 @@ def getFunc(lno):			#generates ast for the replacement function
 
 def extract(lines):			#extract the information from the set of four lines
 	
-	if lines == [] or lines == '\n':
+	if lines == [] or lines == ['\n']:
 		return
 	#print lines
 	para = lines[0].strip()
@@ -180,14 +205,20 @@ def extract(lines):			#extract the information from the set of four lines
 	ast = getFunc(lno)
 	#print ide[1]
 	#assert False
+	bst = ast.ext[0].body
 	replacVar(ast, par)
+	#ast.show()
+	#assert False
 	if ide!=[]:
 		#print 'hello'
-		pointerAssign(ast, ide, ast)
+		pointerAssign(bst, ide, ast)
 	#par = eval('eval(nl[1])')
 	out = printChange(ast, lno)
-	print out
-	assert False
+	stri = str(coo) + '\n' + str(out) + '\n'
+	temp = open('output.txt','a')
+	temp.write(stri)
+	temp.close()
+	#assert False
 
 
 
@@ -196,7 +227,7 @@ def extract(lines):			#extract the information from the set of four lines
 
 
 if __name__ == '__main__':
-	with open('temp.c', 'w'):
+	with open('output.txt', 'w'):
 		pass
 	with open('input.txt') as f:
 		while True:
