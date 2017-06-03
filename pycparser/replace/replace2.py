@@ -108,7 +108,7 @@ def printChange(node, lno):		# prints the final output in a list
 	#print stri
 	stri = stri.split('\n')
 	#print stri
-	stri = ''.join(stri[2:-3]).strip()
+	stri = '\n'.join(stri[2:-3]).strip()
 	#print stri
 	#assert False
 	return stri
