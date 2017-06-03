@@ -1,4 +1,4 @@
 1,2,3,4
-['  int ****m = (int ****) malloc((sizeof(int ***)) * n);']
+int ****m = (int ****) malloc((sizeof(int ***)) * n);
 4,8,6,8
-['  strncpy(m, n, var);']
+strncpy(m, n, var);

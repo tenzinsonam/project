@@ -106,10 +106,10 @@ def printChange(node, lno):		# prints the final output in a list
 	generator = c_generator.CGenerator()
 	stri = generator.visit(node)
 	#print stri
-	stri = stri.split('\n')
+	#stri = stri.split('\n')
 	#print stri
 	#stri = '\n'.join(stri[2:-3]).strip()
-	stri = stri[2:2+int(ran)]
+	stri = stri[13:-3].strip()
 	#print stri
 	#assert False
 	return stri
