@@ -1,4 +1,0 @@
-FuncCall
-strncpy(v1,v2)
-
-

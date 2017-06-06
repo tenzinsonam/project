@@ -1,6 +1,6 @@
 {
-    "name": "zest",
-    "displayName": "zest",
+    "name": "asdf",
+    "displayName": "asdf",
     "description": "",
     "version": "0.0.1",
     "publisher": "qwer",
@@ -16,38 +16,22 @@
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "dontsayHello",
+            "command": "extension.sayHello",
             "title": "Hello World",
             "icon": "index.png"
-            
-        },
-        {
-            "command": "sayHello",
-            "title": "Helicopter"
-        }
-        
-        
-        
-        ],
-        "keybindings": [{
-        "command": "dontsayHello",
-        "key": "ctrl+f1",
-        "mac": "cmd+f1"
-    }],
-    "menus": {
-        "editor/title": [{
-            "command": "dontsayHello",
-            "group": "navigation"
-            
         }],
-        "editor/context": [
-            {
-                "command": "sayHello",
+        "menus": {
+            "editor/title": [{
+                "command": "extension.sayHello",
                 "group": "navigation"
+                
             }
-        ]
-    }
+                
+            ]
+        }
     },
+    
+
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "compile": "tsc -watch -p ./",
