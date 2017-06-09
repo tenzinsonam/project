@@ -1,0 +1,2 @@
+fscanf(param0,param1);
+sdaads(param0);
