@@ -1,0 +1,3 @@
+fscanf(param0,param1);
+sjopid(param0);
+fgy(param1);
