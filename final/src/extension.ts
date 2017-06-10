@@ -37,7 +37,12 @@ export function activate(context: vscode.ExtensionContext) {
             backgroundColor: 'red'
         })    
     let disposable = vscode.commands.registerCommand('extension.check', () => {
-        decorationType.dispose() 
+       //vscode.window.showInformationMessage('Please Wait');
+    PythonShell.run(ASTcheck, optionC, function(err){
+        if (err) throw err
+        PythonShell.run(ASTreplace, function(drr){
+            if (drr) throw err
+            decorationType.dispose() 
         decorationType = vscode.window.createTextEditorDecorationType({
             backgroundColor: 'red'
         })
@@ -59,6 +64,10 @@ export function activate(context: vscode.ExtensionContext) {
         })
 
     })
+            //vscode.window.showInformationMessage('Start');
+        })
+    })
+        
     /*
         let lineReader = require('readline').createInterface({
             input: require('fs').createReadStream(vunge)
@@ -88,8 +97,9 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         PythonShell.run(prnt, optionP, function(err, data){
-            if (err){
+            if (err || !data){
                 vscode.window.showInformationMessage('String not replacable');
+                return
             } 
             let arr = []
             let k = 0
@@ -98,7 +108,7 @@ export function activate(context: vscode.ExtensionContext) {
                 k++
             }
             let dan = arr.pop()
-            console.log(data)
+            //console.log(data)
             let ran = dan.split(',')
             arr.push('')
             k = 0
