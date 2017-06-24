@@ -23,6 +23,9 @@ export function activate(context: vscode.ExtensionContext) {
         args: fn
     }
 
+    let myExtP = vscode.extensions.getExtension('qwer.final').extensionPath
+    console.log(myExtP)
+
     vscode.window.showInformationMessage('Please Wait');
     PythonShell.run(ASTcheck, optionC, function(err){
         if (err) throw err
