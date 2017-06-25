@@ -1,3 +1,0 @@
-dasd
-sdg
-ads
